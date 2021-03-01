@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCmonitoring", "PCmonitoring\PCmonitoring.csproj", "{6E4E74CA-13D7-4A62-8237-A178635DD7D1}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "PCM_1.0", "PCM_1.0\PCM_1.0.aiproj", "{8CCB7575-289A-4865-91F4-5D9B27F55773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E4E74CA-13D7-4A62-8237-A178635DD7D1}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4E74CA-13D7-4A62-8237-A178635DD7D1}.All|Any CPU.Build.0 = Release|Any CPU
+		{6E4E74CA-13D7-4A62-8237-A178635DD7D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E4E74CA-13D7-4A62-8237-A178635DD7D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E4E74CA-13D7-4A62-8237-A178635DD7D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4E74CA-13D7-4A62-8237-A178635DD7D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CCB7575-289A-4865-91F4-5D9B27F55773}.All|Any CPU.ActiveCfg = PCM_build
+		{8CCB7575-289A-4865-91F4-5D9B27F55773}.Debug|Any CPU.ActiveCfg = PCM_build
+		{8CCB7575-289A-4865-91F4-5D9B27F55773}.Release|Any CPU.ActiveCfg = PCM_build
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66FBB406-6460-4377-B06E-33FBC5FF7F40}
+	EndGlobalSection
+EndGlobal
