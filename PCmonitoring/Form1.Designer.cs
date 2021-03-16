@@ -45,11 +45,11 @@ namespace PCmonitoring
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.diskProgressBar = new CircularProgressBar.CircularProgressBar();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.diskCLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.diskCLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.diskCLabel1 = new MetroFramework.Controls.MetroLabel();
             this.sysUpTimeCounter = new System.Diagnostics.PerformanceCounter();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.diskCLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.diskCLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.diskCLabel3 = new MetroFramework.Controls.MetroLabel();
             this.systemUpTimeLabel = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.cpuCounter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memCounter)).BeginInit();
@@ -157,7 +157,7 @@ namespace PCmonitoring
             // 
             // timer2
             // 
-            this.timer2.Interval = 4000;
+            this.timer2.Interval = 20000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // groupBox2
@@ -224,6 +224,24 @@ namespace PCmonitoring
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
+            // diskCLabel3
+            // 
+            resources.ApplyResources(this.diskCLabel3, "diskCLabel3");
+            this.diskCLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.diskCLabel3.Name = "diskCLabel3";
+            // 
+            // diskCLabel2
+            // 
+            resources.ApplyResources(this.diskCLabel2, "diskCLabel2");
+            this.diskCLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.diskCLabel2.Name = "diskCLabel2";
+            // 
+            // diskCLabel1
+            // 
+            resources.ApplyResources(this.diskCLabel1, "diskCLabel1");
+            this.diskCLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.diskCLabel1.Name = "diskCLabel1";
+            // 
             // sysUpTimeCounter
             // 
             this.sysUpTimeCounter.CategoryName = "System";
@@ -236,24 +254,6 @@ namespace PCmonitoring
             this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel1.Name = "metroLabel1";
-            // 
-            // diskCLabel1
-            // 
-            resources.ApplyResources(this.diskCLabel1, "diskCLabel1");
-            this.diskCLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.diskCLabel1.Name = "diskCLabel1";
-            // 
-            // diskCLabel2
-            // 
-            resources.ApplyResources(this.diskCLabel2, "diskCLabel2");
-            this.diskCLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.diskCLabel2.Name = "diskCLabel2";
-            // 
-            // diskCLabel3
-            // 
-            resources.ApplyResources(this.diskCLabel3, "diskCLabel3");
-            this.diskCLabel3.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.diskCLabel3.Name = "diskCLabel3";
             // 
             // systemUpTimeLabel
             // 

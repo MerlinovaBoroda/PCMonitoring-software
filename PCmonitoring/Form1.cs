@@ -11,14 +11,16 @@ namespace PCmonitoring
         const double mbInGB = 1024;
         UInt32 SizeinMB;
         float? temperature;
+        static string compName = System.Environment.GetEnvironmentVariable("COMPUTERNAME");
 
-        PerformanceCounter cDiskCounter = new PerformanceCounter("LogicalDisk", "Free Megabytes", "C:", "vs-nb-104");
+        PerformanceCounter cDiskCounter = new PerformanceCounter("LogicalDisk", "Free Megabytes", "C:", machineName: compName);
                 
         public Monitoring()
         {
-            string compName = System.Environment.GetEnvironmentVariable("COMPUTERNAME");
             InitializeComponent();
             this.Text = compName + " Monitoring";
+            this.TopLevel = true;
+            this.TopMost = true;
         }
 
         public class UpdateVisitor : IVisitor
@@ -72,7 +74,6 @@ namespace PCmonitoring
                 ramAmountLabel.Text = "Amount of RAM = " + SizeinMB.ToString() + " MB";
             }
             
-            string compName = System.Environment.GetEnvironmentVariable("COMPUTERNAME");
             cpuCounter.MachineName = compName;
             memCounter.MachineName = compName;
             sysUpTimeCounter.MachineName = compName;

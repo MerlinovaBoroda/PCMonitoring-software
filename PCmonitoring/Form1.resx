@@ -126,7 +126,7 @@
     <value>Microsoft Sans Serif, 20pt, style=Bold</value>
   </data>
   <data name="cpuProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 22</value>
+    <value>21, 22</value>
   </data>
   <data name="cpuProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 230</value>
@@ -160,7 +160,7 @@
     <value>NoControl</value>
   </data>
   <data name="ramProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>276, 22</value>
+    <value>296, 22</value>
   </data>
   <data name="ramProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 230</value>
@@ -184,7 +184,7 @@
     <value>4</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>994, 14</value>
+    <value>961, 8</value>
   </metadata>
   <metadata name="cpuCounter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>31, 18</value>
@@ -223,7 +223,7 @@
     <value>3, 277</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>253, 170</value>
+    <value>266, 170</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -271,10 +271,10 @@
     <value>0</value>
   </data>
   <data name="cpuTempBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 18</value>
+    <value>52, 18</value>
   </data>
   <data name="cpuTempBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 23</value>
+    <value>208, 23</value>
   </data>
   <data name="cpuTempBar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -292,7 +292,7 @@
     <value>1</value>
   </data>
   <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1074, 13</value>
+    <value>1034, 27</value>
   </metadata>
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -310,10 +310,10 @@
     <value>0</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>262, 277</value>
+    <value>275, 277</value>
   </data>
   <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 170</value>
+    <value>272, 170</value>
   </data>
   <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -394,7 +394,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>791, 450</value>
+    <value>798, 450</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -412,7 +412,7 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="diskProgressBar" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cpuProgressBar" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ramProgressBar" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBox3" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,49,42149,Percent,50,57851,Absolute,266" /&gt;&lt;Rows Styles="Percent,61,11111,Percent,38,88889" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="diskProgressBar" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cpuProgressBar" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ramProgressBar" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBox3" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,49,36479,Percent,50,63521,Absolute,247" /&gt;&lt;Rows Styles="Percent,61,11111,Percent,38,88889" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="diskProgressBar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -424,7 +424,7 @@
     <value>NoControl</value>
   </data>
   <data name="diskProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>542, 22</value>
+    <value>559, 22</value>
   </data>
   <data name="diskProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 230</value>
@@ -487,10 +487,10 @@
     <value>2</value>
   </data>
   <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>527, 277</value>
+    <value>553, 277</value>
   </data>
   <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>261, 170</value>
+    <value>242, 170</value>
   </data>
   <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -509,6 +509,87 @@
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="diskCLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="diskCLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 58</value>
+  </data>
+  <data name="diskCLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 19</value>
+  </data>
+  <data name="diskCLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="diskCLabel3.Text" xml:space="preserve">
+    <value>Disk Free Space</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel3.Name" xml:space="preserve">
+    <value>diskCLabel3</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel3.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="diskCLabel2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="diskCLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 39</value>
+  </data>
+  <data name="diskCLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 19</value>
+  </data>
+  <data name="diskCLabel2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="diskCLabel2.Text" xml:space="preserve">
+    <value>Disk Total Space</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel2.Name" xml:space="preserve">
+    <value>diskCLabel2</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel2.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="diskCLabel1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="diskCLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 20</value>
+  </data>
+  <data name="diskCLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 19</value>
+  </data>
+  <data name="diskCLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="diskCLabel1.Text" xml:space="preserve">
+    <value>Disk Name</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel1.Name" xml:space="preserve">
+    <value>diskCLabel1</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <metadata name="sysUpTimeCounter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>243, 19</value>
@@ -538,87 +619,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroLabel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="diskCLabel1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="diskCLabel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 20</value>
-  </data>
-  <data name="diskCLabel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 19</value>
-  </data>
-  <data name="diskCLabel1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="diskCLabel1.Text" xml:space="preserve">
-    <value>Disk Name</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel1.Name" xml:space="preserve">
-    <value>diskCLabel1</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel1.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel1.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="diskCLabel2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="diskCLabel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 39</value>
-  </data>
-  <data name="diskCLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 19</value>
-  </data>
-  <data name="diskCLabel2.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="diskCLabel2.Text" xml:space="preserve">
-    <value>Disk Total Space</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel2.Name" xml:space="preserve">
-    <value>diskCLabel2</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel2.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel2.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="diskCLabel3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="diskCLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 58</value>
-  </data>
-  <data name="diskCLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 19</value>
-  </data>
-  <data name="diskCLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="diskCLabel3.Text" xml:space="preserve">
-    <value>Disk Free Space</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel3.Name" xml:space="preserve">
-    <value>diskCLabel3</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel3.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;diskCLabel3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="systemUpTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
@@ -658,7 +658,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>806, 546</value>
+    <value>826, 528</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

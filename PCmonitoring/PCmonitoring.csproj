@@ -68,7 +68,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="diskInfo.cs" />
+    <Compile Include="Classes\diskInfo.cs" />
+    <Compile Include="Classes\PCUinfo.cs" />
+    <Compile Include="Classes\RAMinfo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
