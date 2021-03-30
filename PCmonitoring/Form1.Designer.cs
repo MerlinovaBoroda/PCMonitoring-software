@@ -51,6 +51,7 @@ namespace PCmonitoring
             this.sysUpTimeCounter = new System.Diagnostics.PerformanceCounter();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.systemUpTimeLabel = new MetroFramework.Controls.MetroLabel();
+            this.batteryLabel = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.cpuCounter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.memCounter)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -261,11 +262,18 @@ namespace PCmonitoring
             resources.ApplyResources(this.systemUpTimeLabel, "systemUpTimeLabel");
             this.systemUpTimeLabel.Name = "systemUpTimeLabel";
             // 
+            // batteryLabel
+            // 
+            this.batteryLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            resources.ApplyResources(this.batteryLabel, "batteryLabel");
+            this.batteryLabel.Name = "batteryLabel";
+            // 
             // Monitoring
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
+            this.Controls.Add(this.batteryLabel);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.systemUpTimeLabel);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -313,6 +321,7 @@ namespace PCmonitoring
         private MetroFramework.Controls.MetroLabel diskCLabel2;
         private MetroFramework.Controls.MetroLabel diskCLabel1;
         private MetroFramework.Controls.MetroLabel systemUpTimeLabel;
+        private MetroFramework.Controls.MetroLabel batteryLabel;
     }
 }
 

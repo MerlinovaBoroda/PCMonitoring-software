@@ -4,6 +4,7 @@ using System.Diagnostics;
 using OpenHardwareMonitor.Hardware;
 
 
+
 namespace PCmonitoring
 {
     public partial class Monitoring : MetroFramework.Forms.MetroForm
@@ -115,15 +116,21 @@ namespace PCmonitoring
             diskProgressBar.Value = diskProgressBar.Maximum - (int)diskval;
         }
 
+        private void batterycount()
+        {
+             
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             cpucount();
             ramcount();
             sysuptime();
             diskcount();
+            batterycount();
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void timer2_Tick(object sender, EventArgs e) 
         {
             cpuTempLabel.Text = GetSystemInfo().ToString() + " \u00b0C";
             cpuTempBar.Value = (int)GetSystemInfo();

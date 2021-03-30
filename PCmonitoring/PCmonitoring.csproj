@@ -68,8 +68,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\batteryInfo.cs" />
     <Compile Include="Classes\diskInfo.cs" />
-    <Compile Include="Classes\PCUinfo.cs" />
+    <Compile Include="Classes\CPUinfo.cs" />
     <Compile Include="Classes\RAMinfo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
