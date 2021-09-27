@@ -1,43 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<DOCUMENT Type="Advanced Installer" CreateVersion="18.0" version="18.0" Modules="simple" RootPath="." Language="en" Id="{87399FB8-E46D-4306-8B0F-24D3D306D353}">
+<DOCUMENT Type="Advanced Installer" CreateVersion="17.0" version="17.0" Modules="enterprise" RootPath="." Language="en" Id="{4A5894DA-D4F6-4B31-92AF-B5A41C6C1207}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXAppDetailsComponent;FixupComponent;AppXCapabilitiesComponent;AppXDependenciesComponent;AppXProductDetailsComponent;AppXVisualAssetsComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Select the installation package for [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_DOTNET_VERSION"/>
+    <ROW Property="AI_REQUIRED_DOTNET_DISPLAY" MultiBuildValue="DefaultBuild:4.8" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_DOTNET_VERSION" MultiBuildValue="DefaultBuild:4.8" ValueLocId="-"/>
+    <ROW Property="AI_ThemeStyle" Value="aero" MsiKey="AI_ThemeStyle"/>
     <ROW Property="ALLUSERS" Value="1"/>
-    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|PC Monitoring software]." ValueLocId="*"/>
-    <ROW Property="Manufacturer" Value="Merlin Company"/>
-    <ROW Property="P" Value="P"/>
-    <ROW Property="PC" Value="PC"/>
-    <ROW Property="ProductCode" Value="1033:{832807DC-86DA-48CD-887F-AE007149DA6F} " Type="16"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPNOREPAIR" MultiBuildValue="DefaultBuild:1"/>
+    <ROW Property="ARPPRODUCTICON" Value="pc.exe" Type="8"/>
+    <ROW Property="ARPSYSTEMCOMPONENT" Value="1"/>
+    <ROW Property="Manufacturer" Value="PCM Software Company"/>
+    <ROW Property="ProductCode" Value="1033:{4F3982DA-FD28-47D3-86D9-4372418AEC46} 1058:{4F3982DA-FD28-47D3-86D9-4372418AEC46} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="Your Application"/>
+    <ROW Property="ProductName" Value="PCM Software"/>
     <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
-    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
-    <ROW Property="UpgradeCode" Value="{F1C0C6A9-9817-4657-BC1A-AAD38B7C92B8}"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{5CB29036-CE91-43F2-8903-A33321A42D1B}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
     <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT" MultiBuildValue="DefaultBuild:Windows Vista x86, Windows Server 2008 x86, Windows 7 x86" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
     <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64" MultiBuildValue="DefaultBuild:Windows Vista x64, Windows Server 2008 x64, Windows 7 x64, Windows Server 2008 R2 x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT64Display" MultiBuildValue="DefaultBuild:Windows Vista x64, Windows Server 2008 x64, Windows 7 x64, Windows Server 2008 R2 x64" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNTDisplay" MultiBuildValue="DefaultBuild:Windows Vista x86, Windows Server 2008 x86, Windows 7 x86" ValueLocId="-"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
-    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
-    <ROW Component="APPDIR" ComponentId="{08A04DD7-BCFD-4DF7-87C8-EC826BD96260}" Directory_="APPDIR" Attributes="0"/>
-    <ROW Component="CircularProgressBar.dll" ComponentId="{BF18DBB7-417F-4CEF-90FE-8F2C73B14560}" Directory_="APPDIR" Attributes="0" KeyPath="CircularProgressBar.dll"/>
-    <ROW Component="CircularProgressBar.xml" ComponentId="{CCD75661-C65B-4D58-9357-D1055B42B0F5}" Directory_="APPDIR" Attributes="0" KeyPath="CircularProgressBar.xml" Type="0"/>
-    <ROW Component="MetroFramework.Design.dll" ComponentId="{F04C8B04-C146-4A03-8E5A-FCC47AD8F253}" Directory_="APPDIR" Attributes="0" KeyPath="MetroFramework.Design.dll"/>
-    <ROW Component="MetroFramework.Fonts.dll" ComponentId="{54837972-7503-4BE0-B9F4-B6C0E63EBFD7}" Directory_="APPDIR" Attributes="0" KeyPath="MetroFramework.Fonts.dll"/>
-    <ROW Component="MetroFramework.dll" ComponentId="{8029BADA-B33D-45E7-B802-7D7A042C1521}" Directory_="APPDIR" Attributes="0" KeyPath="MetroFramework.dll"/>
-    <ROW Component="OpenHardwareMonitorLib.dll" ComponentId="{56AA7564-29E1-4A96-9A89-DE627E02C162}" Directory_="APPDIR" Attributes="0" KeyPath="OpenHardwareMonitorLib.dll"/>
-    <ROW Component="PCmonitoring.exe" ComponentId="{6BBB31BA-CC96-46A5-8299-6BEFD123B35F}" Directory_="APPDIR" Attributes="0" KeyPath="PCmonitoring.exe"/>
-    <ROW Component="ProductInformation" ComponentId="{56B699CD-F2B4-41F8-9B61-A1692AFBF5A0}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
-    <ROW Component="WinFormAnimation.dll" ComponentId="{662D1B3D-2D87-4BCE-BA32-43433377E10D}" Directory_="APPDIR" Attributes="0" KeyPath="WinFormAnimation.dll"/>
+    <ROW Component="AI_ExePath" ComponentId="{6B77901B-830B-4BA7-8CAB-1730A9AE1726}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="APPDIR" ComponentId="{C5A9FF09-742C-442A-A835-1E4D46488791}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="CircularProgressBar.dll" ComponentId="{67027AB7-7F22-4495-9779-A87827D34F38}" Directory_="APPDIR" Attributes="0" KeyPath="CircularProgressBar.dll"/>
+    <ROW Component="CircularProgressBar.xml" ComponentId="{CC5BF089-E22A-414D-A63F-190E327FD004}" Directory_="APPDIR" Attributes="0" KeyPath="CircularProgressBar.xml" Type="0"/>
+    <ROW Component="MetroFramework.Design.dll" ComponentId="{E83EE331-E41A-4827-B764-1246A2B47187}" Directory_="APPDIR" Attributes="0" KeyPath="MetroFramework.Design.dll"/>
+    <ROW Component="MetroFramework.Fonts.dll" ComponentId="{BAD9F307-72DA-4C29-84D4-B3AEAE246D5C}" Directory_="APPDIR" Attributes="0" KeyPath="MetroFramework.Fonts.dll"/>
+    <ROW Component="MetroFramework.dll" ComponentId="{0413EAB9-9FCE-49CF-9F94-69A44E84E453}" Directory_="APPDIR" Attributes="0" KeyPath="MetroFramework.dll"/>
+    <ROW Component="OpenHardwareMonitorLib.dll" ComponentId="{A30E611D-0EA3-43F8-B374-C14EFDB39285}" Directory_="APPDIR" Attributes="0" KeyPath="OpenHardwareMonitorLib.dll"/>
+    <ROW Component="PCmonitoring.exe" ComponentId="{55B75640-33AE-4D89-847B-373CF65AA2E9}" Directory_="APPDIR" Attributes="0" KeyPath="PCmonitoring.exe"/>
+    <ROW Component="ProductInformation" ComponentId="{C958C046-A5C1-492C-A88D-F9ACEF402915}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{DC74A698-8D1A-40BA-944D-79E39553D355}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="WinFormAnimation.dll" ComponentId="{71364F8A-A91A-4445-9373-FF7586B472F3}" Directory_="APPDIR" Attributes="0" KeyPath="WinFormAnimation.dll"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
@@ -58,16 +73,21 @@
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
-    <ROW BuildKey="DefaultBuild" BuildName="PCM_build" BuildOrder="1" BuildType="0" PackageFileName="pcm_1.0_install" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="1" Languages="en;uk" LangOpt="2" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="C:\Users\Merlin\Desktop\favicon0.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" LangsDialog="true" UseLargeSchema="true" Unicode="true"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
     <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
     <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_uk.ail"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
     <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
     <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="LanguageDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\LanguageDlg.aip"/>
     <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
     <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
     <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
@@ -79,9 +99,69 @@
     <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
     <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Deleting files extracted from archive" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractFiles" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Extracting files from archive" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="DefaultBuild"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="DefaultBuild"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
     <ROW Name="ShortcutFlags.dll" SourcePath="&lt;AI_CUSTACTS&gt;ShortcutFlags.dll"/>
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
     <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlComponent">
+    <ROW Dialog_="AdminBrowseDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="200" MsiKey="AdminBrowseDlg#BottomLine"/>
+    <ROW Dialog_="AdminBrowseDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="300" TextLocId="Control.Text.AdminBrowseDlg#Logo" MsiKey="AdminBrowseDlg#Logo"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="400" MsiKey="AdminInstallPointDlg#BottomLine"/>
+    <ROW Dialog_="AdminInstallPointDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="500" TextLocId="Control.Text.AdminInstallPointDlg#Logo" MsiKey="AdminInstallPointDlg#Logo"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="300" MsiKey="AdminWelcomeDlg#Bitmap"/>
+    <ROW Dialog_="AdminWelcomeDlg" Control="Description" Type="Text" X="135" Y="86" Width="220" Height="47" Attributes="196611" Text="The [Wizard] will create a server image of [ProductName], at a specified network location.  Click &quot;[Text_Next]&quot; to continue or &quot;Cancel&quot; to exit the [Wizard]." Order="600" TextLocId="Control.Text.AdminWelcomeDlg#Description" MsiKey="AdminWelcomeDlg#Description"/>
+    <ROW Dialog_="BrowseDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="200" MsiKey="BrowseDlg#BottomLine"/>
+    <ROW Dialog_="BrowseDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="300" TextLocId="Control.Text.BrowseDlg#Logo" MsiKey="BrowseDlg#Logo"/>
+    <ROW Dialog_="CustomizeDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="500" MsiKey="CustomizeDlg#BottomLine"/>
+    <ROW Dialog_="CustomizeDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="600" TextLocId="Control.Text.CustomizeDlg#Logo" MsiKey="CustomizeDlg#Logo"/>
+    <ROW Dialog_="DiskCostDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="300" MsiKey="DiskCostDlg#BottomLine"/>
+    <ROW Dialog_="DiskCostDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="400" TextLocId="Control.Text.DiskCostDlg#Logo" MsiKey="DiskCostDlg#Logo"/>
+    <ROW Dialog_="ExitDialog" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="300" MsiKey="ExitDialog#Bitmap"/>
+    <ROW Dialog_="FatalError" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="300" MsiKey="FatalError#Bitmap"/>
+    <ROW Dialog_="FilesInUse" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="500" MsiKey="FilesInUse#BottomLine"/>
+    <ROW Dialog_="FilesInUse" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="600" TextLocId="Control.Text.FilesInUse#Logo" MsiKey="FilesInUse#Logo"/>
+    <ROW Dialog_="FolderDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="500" MsiKey="FolderDlg#BottomLine"/>
+    <ROW Dialog_="FolderDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="[ProductName] installer" Order="600" MsiKey="FolderDlg#Logo"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="1100" MsiKey="MaintenanceTypeDlg#BottomLine"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="1200" TextLocId="Control.Text.MaintenanceTypeDlg#Logo" MsiKey="MaintenanceTypeDlg#Logo"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="300" MsiKey="MaintenanceWelcomeDlg#Bitmap"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control="Description" Type="Text" X="135" Y="86" Width="220" Height="47" Attributes="196611" Text="The [Wizard] will allow you to change the way [ProductName] features are installed on your computer or even to remove [ProductName] from your computer.  Click &quot;[Text_Next]&quot; to continue or &quot;Cancel&quot; to exit the [Wizard]." Order="600" TextLocId="Control.Text.MaintenanceWelcomeDlg#Description" MsiKey="MaintenanceWelcomeDlg#Description"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="1000" MsiKey="MsiRMFilesInUse#BottomLine"/>
+    <ROW Dialog_="MsiRMFilesInUse" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="1100" TextLocId="Control.Text.MsiRMFilesInUse#Logo" MsiKey="MsiRMFilesInUse#Logo"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="300" MsiKey="OutOfDiskDlg#BottomLine"/>
+    <ROW Dialog_="OutOfDiskDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="400" TextLocId="Control.Text.OutOfDiskDlg#Logo" MsiKey="OutOfDiskDlg#Logo"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="400" MsiKey="OutOfRbDiskDlg#BottomLine"/>
+    <ROW Dialog_="OutOfRbDiskDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="500" TextLocId="Control.Text.OutOfRbDiskDlg#Logo" MsiKey="OutOfRbDiskDlg#Logo"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="300" MsiKey="PatchWelcomeDlg#Bitmap"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control="Description" Type="Text" X="135" Y="86" Width="220" Height="47" Attributes="196611" Text="The [Wizard] will install the Patch for [ProductName] on your computer. Click &quot;[Text_Next]&quot; to continue or &quot;Cancel&quot; to exit the Patch [Wizard]." Order="600" TextLocId="Control.Text.PatchWelcomeDlg#Description" MsiKey="PatchWelcomeDlg#Description"/>
+    <ROW Dialog_="PrepareDlg" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="200" MsiKey="PrepareDlg#Bitmap"/>
+    <ROW Dialog_="PrepareDlg" Control="Description" Type="Text" X="135" Y="86" Width="220" Height="20" Attributes="196611" Text="Please wait while the [Wizard] prepares to guide you through the installation." Order="500" TextLocId="Control.Text.PrepareDlg#Description" MsiKey="PrepareDlg#Description"/>
+    <ROW Dialog_="ProgressDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="300" MsiKey="ProgressDlg#BottomLine"/>
+    <ROW Dialog_="ProgressDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="400" TextLocId="Control.Text.ProgressDlg#Logo" MsiKey="ProgressDlg#Logo"/>
+    <ROW Dialog_="ResumeDlg" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="300" MsiKey="ResumeDlg#Bitmap"/>
+    <ROW Dialog_="ResumeDlg" Control="Description" Type="Text" X="135" Y="86" Width="220" Height="47" Attributes="196611" Text="The [Wizard] will complete the installation of [ProductName] on your computer.  Click &quot;Install&quot; to continue or &quot;Cancel&quot; to exit the [Wizard]." Order="600" TextLocId="Control.Text.ResumeDlg#Description" MsiKey="ResumeDlg#Description"/>
+    <ROW Dialog_="UserExit" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="300" MsiKey="UserExit#Bitmap"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="400" MsiKey="VerifyReadyDlg#BottomLine"/>
+    <ROW Dialog_="VerifyReadyDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="[ProductName] installer" Order="500" MsiKey="VerifyReadyDlg#Logo"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="500" MsiKey="VerifyRemoveDlg#BottomLine"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="600" TextLocId="Control.Text.VerifyRemoveDlg#Logo" MsiKey="VerifyRemoveDlg#Logo"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="BottomLine" Type="Line" X="5" Y="234" Width="366" Height="2" Attributes="1" Order="400" MsiKey="VerifyRepairDlg#BottomLine"/>
+    <ROW Dialog_="VerifyRepairDlg" Control="Logo" Type="Text" X="4" Y="228" Width="84" Height="12" Attributes="1" Text="Advanced Installer" Order="500" TextLocId="Control.Text.VerifyRepairDlg#Logo" MsiKey="VerifyRepairDlg#Logo"/>
+    <ROW Dialog_="WelcomeDlg" Control="Bitmap" Type="Bitmap" X="1" Y="0" Width="370" Height="234" Attributes="1048577" Text="[DialogBitmap]" Order="300" MsiKey="WelcomeDlg#Bitmap"/>
+    <ROW Dialog_="WelcomeDlg" Control="Description" Type="Text" X="135" Y="86" Width="220" Height="47" Attributes="196611" Text="The [Wizard] will install [ProductName] on your computer.  Click &quot;[Text_Next]&quot; to continue or &quot;Cancel&quot; to exit the [Wizard]." Order="600" TextLocId="Control.Text.WelcomeDlg#Description" MsiKey="WelcomeDlg#Description"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
     <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
@@ -106,21 +186,36 @@
     <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
     <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
     <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="LanguageDlg" Control_="Next" Event="EndDialog" Argument="Return" Condition="AI_BOOTSTRAPPER" Ordering="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
     <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
     <ROW Action="AI_ApplyShortcutFlags" Type="3073" Source="ShortcutFlags.dll" Target="UpdateShortcutFlags" WithoutSeq="true"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="AI_ExtractFiles" Target="[AI_SETUPEXEPATH]"/>
     <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
     <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
     <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_EstimateExtractFiles" Type="1" Source="Prereq.dll" Target="EstimateExtractFiles"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1025" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
     <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
     <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
     <ROW Action="AI_PinShortcuts" Type="1" Source="ShortcutFlags.dll" Target="PinShortcuts"/>
     <ROW Action="AI_PinToStartScreen" Type="1025" Source="ShortcutFlags.dll" Target="PinToStartScreen" WithoutSeq="true"/>
     <ROW Action="AI_PinToTaskbar" Type="1025" Source="ShortcutFlags.dll" Target="PinToTaskbar" WithoutSeq="true"/>
     <ROW Action="AI_PrepareShortcutFlags" Type="1" Source="ShortcutFlags.dll" Target="PrepareActionData"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
     <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
     <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
@@ -131,6 +226,32 @@
     <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDialogComponent">
+    <ROW Dialog="AdminBrowseDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="OK" Control_Cancel="Cancel" TitleLocId="Dialog.AdminBrowseDlg" MsiKey="AdminBrowseDlg"/>
+    <ROW Dialog="AdminInstallPointDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.AdminInstallPointDlg" MsiKey="AdminInstallPointDlg"/>
+    <ROW Dialog="AdminWelcomeDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.AdminWelcomeDlg" MsiKey="AdminWelcomeDlg"/>
+    <ROW Dialog="BrowseDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="OK" Control_Cancel="Cancel" TitleLocId="Dialog.BrowseDlg" MsiKey="BrowseDlg"/>
+    <ROW Dialog="CustomizeDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="35" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.CustomizeDlg" MsiKey="CustomizeDlg"/>
+    <ROW Dialog="DiskCostDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="OK" Control_Cancel="OK" TitleLocId="Dialog.DiskCostDlg" MsiKey="DiskCostDlg"/>
+    <ROW Dialog="ExitDialog" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Finish" Control_Cancel="Finish" TitleLocId="Dialog.ExitDialog" MsiKey="ExitDialog"/>
+    <ROW Dialog="FatalError" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Finish" Control_Cancel="Finish" TitleLocId="Dialog.FatalError" MsiKey="FatalError"/>
+    <ROW Dialog="FilesInUse" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="19" Title="[ProductName] [Setup]" Control_Default="Retry" Control_Cancel="Retry" TitleLocId="Dialog.FilesInUse" MsiKey="FilesInUse"/>
+    <ROW Dialog="FolderDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="39" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.FolderDlg" MsiKey="FolderDlg"/>
+    <ROW Dialog="MaintenanceTypeDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="ChangeButton" Control_Cancel="Cancel" TitleLocId="Dialog.MaintenanceTypeDlg" MsiKey="MaintenanceTypeDlg"/>
+    <ROW Dialog="MaintenanceWelcomeDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.MaintenanceWelcomeDlg" MsiKey="MaintenanceWelcomeDlg"/>
+    <ROW Dialog="MsiRMFilesInUse" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="19" Title="[ProductName] [Setup]" Control_Default="OK" Control_Cancel="Cancel" TitleLocId="Dialog.MsiRMFilesInUse" MsiKey="MsiRMFilesInUse"/>
+    <ROW Dialog="OutOfDiskDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="OK" Control_Cancel="OK" TitleLocId="Dialog.OutOfDiskDlg" MsiKey="OutOfDiskDlg"/>
+    <ROW Dialog="OutOfRbDiskDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="No" Control_Cancel="No" TitleLocId="Dialog.OutOfRbDiskDlg" MsiKey="OutOfRbDiskDlg"/>
+    <ROW Dialog="PatchWelcomeDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.PatchWelcomeDlg" MsiKey="PatchWelcomeDlg"/>
+    <ROW Dialog="PrepareDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="1" Title="[ProductName] [Setup]" Control_Default="Cancel" Control_Cancel="Cancel" TitleLocId="Dialog.PrepareDlg" MsiKey="PrepareDlg"/>
+    <ROW Dialog="ProgressDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="1" Title="[ProductName] [Setup]" Control_Default="Cancel" Control_Cancel="Cancel" TitleLocId="Dialog.ProgressDlg" MsiKey="ProgressDlg"/>
+    <ROW Dialog="ResumeDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Install" Control_Cancel="Cancel" TitleLocId="Dialog.ResumeDlg" MsiKey="ResumeDlg"/>
+    <ROW Dialog="UserExit" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Finish" Control_Cancel="Finish" TitleLocId="Dialog.UserExit" MsiKey="UserExit"/>
+    <ROW Dialog="VerifyReadyDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="35" Title="[ProductName] [Setup]" Control_Default="Install" Control_Cancel="Cancel" TitleLocId="Dialog.VerifyReadyDlg" MsiKey="VerifyReadyDlg"/>
+    <ROW Dialog="VerifyRemoveDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="35" Title="[ProductName] [Setup]" Control_Default="Back" Control_Cancel="Cancel" TitleLocId="Dialog.VerifyRemoveDlg" MsiKey="VerifyRemoveDlg"/>
+    <ROW Dialog="VerifyRepairDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="35" Title="[ProductName] [Setup]" Control_Default="Repair" Control_Cancel="Cancel" TitleLocId="Dialog.VerifyRepairDlg" MsiKey="VerifyRepairDlg"/>
+    <ROW Dialog="WelcomeDlg" HCentering="50" VCentering="50" Width="384" Height="270" Attributes="3" Title="[ProductName] [Setup]" Control_Default="Next" Control_Cancel="Cancel" TitleLocId="Dialog.WelcomeDlg" MsiKey="WelcomeDlg"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
@@ -143,6 +264,11 @@
     <ROW Feature_="MainFeature" Component_="OpenHardwareMonitorLib.dll"/>
     <ROW Feature_="MainFeature" Component_="PCmonitoring.exe"/>
     <ROW Feature_="MainFeature" Component_="WinFormAnimation.dll"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="AI_ExePath"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="pc.exe" SourcePath="..\PCmonitoring\images\pc.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
@@ -154,25 +280,50 @@
     <ROW Action="AI_PrepareShortcutFlags" Condition="(VersionNT &gt; 501) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="4501"/>
     <ROW Action="AI_PinShortcuts" Condition="(VersionNT &gt; 600) AND ((NOT Installed) OR (Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;)))" Sequence="6499"/>
     <ROW Action="AI_UnpinShortcuts" Condition="(VersionNT &gt; 600) AND (REMOVE = &quot;ALL&quot;)" Sequence="3199"/>
+    <ROW Action="AI_DetectSoftware" Sequence="102"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="DefaultBuild"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="DefaultBuild"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="DefaultBuild"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6599" Builds="DefaultBuild"/>
+    <ROW Action="AI_ExtractFiles" Sequence="3998" Builds="DefaultBuild"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="3997"/>
+    <ROW Action="AI_EstimateExtractFiles" Sequence="3999" Builds="DefaultBuild"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
     <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
     <ROW Action="AI_DpiContentScale" Sequence="52"/>
     <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="102"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="( Version9X OR ( NOT VersionNT64 ) OR ( VersionNT64 AND ((VersionNT64 &lt;&gt; 600) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT64 &lt;&gt; 600) OR (MsiNTProductType = 1)) AND ((VersionNT64 &lt;&gt; 601) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT64 &lt;&gt; 601) OR (MsiNTProductType = 1)) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNT64Display]." DescriptionLocId="AI.LaunchCondition.NoSpecificNT64" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="( Version9X OR VersionNT64 OR ( VersionNT AND ((VersionNT &lt;&gt; 600) OR (MsiNTProductType &lt;&gt; 1)) AND ((VersionNT &lt;&gt; 600) OR (MsiNTProductType = 1)) AND (VersionNT &lt;&gt; 601) ) )" Description="[ProductName] cannot be installed on the following Windows versions: [WindowsTypeNTDisplay]." DescriptionLocId="AI.LaunchCondition.NoSpecificNT" IsPredefined="true" Builds="DefaultBuild"/>
     <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
     <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
     <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_DOTNET_VERSION &gt;= AI_REQUIRED_DOTNET_VERSION" Description="[ProductName] cannot be installed on systems with .NET Framework version lower than [AI_REQUIRED_DOTNET_DISPLAY]." DescriptionLocId="AI.LaunchCondition.DotNET" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="SETUPEXEDIR OR (REMOVE=&quot;ALL&quot;)" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="DefaultBuild"/>
     <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
     <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="PCMsoftware" Directory_="DesktopFolder" Name="PCMSOF~1|PCM software" Component_="PCmonitoring.exe" Target="[#PCmonitoring.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="APPDIR" CustomFlags="1"/>
+    <ROW Shortcut="PCmonitoring" Directory_="SHORTCUTDIR" Name="PCMONI~1|PCmonitoring" Component_="PCmonitoring.exe" Target="[#PCmonitoring.exe]" Hotkey="0" Icon_="pc.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR" CustomFlags="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>

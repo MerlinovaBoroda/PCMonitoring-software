@@ -126,7 +126,7 @@
     <value>Microsoft Sans Serif, 20pt, style=Bold</value>
   </data>
   <data name="cpuProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 22</value>
+    <value>14, 22</value>
   </data>
   <data name="cpuProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 230</value>
@@ -160,7 +160,7 @@
     <value>NoControl</value>
   </data>
   <data name="ramProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 22</value>
+    <value>275, 22</value>
   </data>
   <data name="ramProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 230</value>
@@ -184,7 +184,7 @@
     <value>4</value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>961, 8</value>
+    <value>994, 14</value>
   </metadata>
   <metadata name="cpuCounter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>31, 18</value>
@@ -223,10 +223,10 @@
     <value>0</value>
   </data>
   <data name="cpuTempBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 18</value>
+    <value>66, 18</value>
   </data>
   <data name="cpuTempBar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 23</value>
+    <value>182, 23</value>
   </data>
   <data name="cpuTempBar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -247,7 +247,7 @@
     <value>3, 277</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 170</value>
+    <value>252, 170</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -268,10 +268,46 @@
     <value>1</value>
   </data>
   <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1034, 27</value>
+    <value>1074, 13</value>
   </metadata>
   <data name="groupBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;ramAmountLabel.Name" xml:space="preserve">
+    <value>ramAmountLabel</value>
+  </data>
+  <data name="&gt;&gt;ramAmountLabel.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;ramAmountLabel.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;ramAmountLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 277</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 170</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>RAM information</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="ramAmountLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -300,30 +336,6 @@
   <data name="&gt;&gt;ramAmountLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 277</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 170</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>RAM information</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
@@ -337,7 +349,7 @@
     <value>NoControl</value>
   </data>
   <data name="diskProgressBar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>558, 22</value>
+    <value>542, 22</value>
   </data>
   <data name="diskProgressBar.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 230</value>
@@ -362,6 +374,93 @@
   </data>
   <data name="groupBox3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel3.Name" xml:space="preserve">
+    <value>diskCLabel3</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel3.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel2.Name" xml:space="preserve">
+    <value>diskCLabel2</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel2.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel1.Name" xml:space="preserve">
+    <value>diskCLabel1</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;diskCLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>526, 277</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 170</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>DISK information</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 60</value>
+  </data>
+  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>791, 450</value>
+  </data>
+  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="diskProgressBar" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cpuProgressBar" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ramProgressBar" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBox3" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,49,42149,Percent,50,57851,Absolute,267" /&gt;&lt;Rows Styles="Percent,61,11111,Percent,38,88889" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="diskCLabel3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -444,57 +543,6 @@
   <data name="&gt;&gt;diskCLabel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>552, 277</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 170</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>DISK information</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 82</value>
-  </data>
-  <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>798, 450</value>
-  </data>
-  <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="diskProgressBar" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="groupBox2" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cpuProgressBar" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ramProgressBar" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBox3" Row="1" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,49,36479,Percent,50,63521,Absolute,248" /&gt;&lt;Rows Styles="Percent,61,11111,Percent,38,88889" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <metadata name="sysUpTimeCounter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>243, 19</value>
   </metadata>
@@ -523,10 +571,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;metroLabel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="systemUpTimeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>539, 60</value>
+    <value>532, 38</value>
   </data>
   <data name="systemUpTimeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>264, 19</value>
@@ -550,34 +598,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;systemUpTimeLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="batteryLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>539, 41</value>
-  </data>
-  <data name="batteryLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>264, 19</value>
-  </data>
-  <data name="batteryLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="batteryLabel.Text" xml:space="preserve">
-    <value>Battery Charge Status</value>
-  </data>
-  <data name="batteryLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;batteryLabel.Name" xml:space="preserve">
-    <value>batteryLabel</value>
-  </data>
-  <data name="&gt;&gt;batteryLabel.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;batteryLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;batteryLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -589,7 +610,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>826, 555</value>
+    <value>806, 546</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

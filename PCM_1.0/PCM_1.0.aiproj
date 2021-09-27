@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>8ccb7575-289a-4865-91f4-5d9b27f55773</ProjectGuid>
+    <ProjectGuid>22edc969-cfd3-44f6-bc00-4a48ce808f0f</ProjectGuid>
     <OutputType>msi</OutputType>
     <ProjectHome>.</ProjectHome>
     <StartupFile>PCM_1.0.aip</StartupFile>
@@ -16,7 +16,7 @@
     <LoadFromTemplate>
     </LoadFromTemplate>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'PCM_build' " />
+  <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' " />
   <ItemGroup>
     <Compile Include="PCM_1.0.aip">
       <SubType>Code</SubType>

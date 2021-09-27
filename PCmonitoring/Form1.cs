@@ -1,70 +1,28 @@
 ﻿using System;
 using System.Management;
 using System.Diagnostics;
-using OpenHardwareMonitor.Hardware;
-
-
+using MonitoringLibrary;
 
 namespace PCmonitoring
 {
     public partial class Monitoring : MetroFramework.Forms.MetroForm
     {
+        
         const double mbInGB = 1024;
         UInt32 SizeinMB;
-        float? temperature;
         static string compName = System.Environment.GetEnvironmentVariable("COMPUTERNAME");
 
-        PerformanceCounter cDiskCounter = new PerformanceCounter("LogicalDisk", "Free Megabytes", "C:", machineName: compName);
-                
+        PerformanceCounter cDiskCounter = new PerformanceCounter("LogicalDisk", "Free Megabytes", "C:", compName);
+
         public Monitoring()
         {
-            InitializeComponent();
             this.Text = compName + " Monitoring";
-            this.TopLevel = true;
-            this.TopMost = true;
-        }
-
-        public class UpdateVisitor : IVisitor
-        {
-            public void VisitComputer(IComputer computer)
-            {
-                computer.Traverse(this);
-            }
-            public void VisitHardware(IHardware hardware)
-            {
-                hardware.Update();
-                foreach (IHardware subHardware in hardware.SubHardware) subHardware.Accept(this);
-            }
-            public void VisitSensor(ISensor sensor) { }
-            public void VisitParameter(IParameter parameter) { }
-        }
-
-        float? GetSystemInfo()
-        {
-            UpdateVisitor updateVisitor = new UpdateVisitor();
-            Computer computer = new Computer();
-            computer.Open();
-            computer.CPUEnabled = true;
-            computer.Accept(updateVisitor);
-            for (int i = 0; i < computer.Hardware.Length; i++)
-            {
-                if (computer.Hardware[i].HardwareType == HardwareType.CPU)
-                {
-                    for (int j = 0; j < computer.Hardware[i].Sensors.Length; j++)
-                    {
-                        if (computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
-                            temperature = computer.Hardware[i].Sensors[j].Value;
-                            
-                    }
-                }
-            }
-            computer.Close();
-            return temperature;
+            InitializeComponent();
         }
 
         private void Monitoring_Load(object sender, EventArgs e)
         {
-            diskInfo disk = new diskInfo();
+            DiskInfo disk = new DiskInfo();
             timer2.Start();
             string Query = "SELECT MaxCapacity FROM Win32_PhysicalMemoryArray";
             ManagementObjectSearcher searcher = new ManagementObjectSearcher(Query);
@@ -105,20 +63,15 @@ namespace PCmonitoring
 
         private void diskcount()
         {
-            diskCLabel1.Text = "Drive: " + diskInfo.diskName;
-            diskCLabel2.Text = "Total Disk Space = " + diskInfo.totalDiskSpaceInGb + " GB";
-            diskCLabel3.Text = "Total Free Disk Space = " + diskInfo.avaliableDiskSpace + " GB";
+            diskCLabel1.Text = "Drive: " + DiskInfo.diskName;
+            diskCLabel2.Text = "Total Disk Space = " + DiskInfo.totalDiskSpaceInGb + " GB";
+            diskCLabel3.Text = "Total Free Disk Space = " + DiskInfo.avaliableDiskSpace + " GB";
 
             
             double diskval = Math.Round(cDiskCounter.NextValue() / mbInGB, 2);
-            diskProgressBar.Maximum = Convert.ToInt32(diskInfo.totalDiskSpaceInGb);
+            diskProgressBar.Maximum = Convert.ToInt32(DiskInfo.totalDiskSpaceInGb);
             diskProgressBar.Text = diskval.ToString() + " GB";
             diskProgressBar.Value = diskProgressBar.Maximum - (int)diskval;
-        }
-
-        private void batterycount()
-        {
-             
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -127,13 +80,12 @@ namespace PCmonitoring
             ramcount();
             sysuptime();
             diskcount();
-            batterycount();
         }
 
-        private void timer2_Tick(object sender, EventArgs e) 
+        private void timer2_Tick(object sender, EventArgs e)
         {
-            cpuTempLabel.Text = GetSystemInfo().ToString() + " \u00b0C";
-            cpuTempBar.Value = (int)GetSystemInfo();
+            cpuTempLabel.Text = SystemInformation.GetSystemInfo().ToString() + " \u00b0C";
+            cpuTempBar.Value = Convert.ToInt32(SystemInformation.GetSystemInfo());
         }
     }
 }
