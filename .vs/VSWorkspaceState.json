@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PCmonitoring"
   ],
-  "SelectedNode": "\\PCmonitoring.sln",
+  "SelectedNode": "\\PCmonitoring\\Form1.cs",
   "PreviewInSolutionExplorer": false
 }
