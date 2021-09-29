@@ -147,6 +147,7 @@ namespace PCmonitoring
             // cpuTempLabel
             // 
             resources.ApplyResources(this.cpuTempLabel, "cpuTempLabel");
+            this.cpuTempLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.cpuTempLabel.Name = "cpuTempLabel";
             // 
             // cpuTempBar

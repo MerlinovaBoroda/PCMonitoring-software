@@ -1,18 +1,23 @@
 ﻿using System;
 using System.IO;
 using OpenHardwareMonitor.Hardware;
+using System.Management;
 
 namespace MonitoringLibrary
 {
+
     public class DiskInfo
     {
         public static string diskName;
         public static double totalDiskSpaceInGb;
         public static double avaliableDiskSpace;
 
-        public void CheckDiskC()
+        const double BytesInGB = 1073741824;
+        const double BytesInMB = 1048576;
+
+        public static void CheckDiskC()
         {
-            const double BytesInGB = 1073741824;
+
             string cdrive = "C:\\";
             foreach (DriveInfo drive in DriveInfo.GetDrives())
             {
@@ -24,6 +29,22 @@ namespace MonitoringLibrary
                     avaliableDiskSpace = Math.Round(drive.TotalFreeSpace / BytesInGB, 2);
                 }
             }
+        }
+
+        //TODO: пофіксити діск чек по аналогії з оперативкою
+        public static int DiskFreeSpace()
+        {
+            var freeSpace = 0;
+            string cdrive = "C:\\";
+            foreach (DriveInfo drive in DriveInfo.GetDrives())
+            {
+                // Skip to next loop cycle when drive is not ready
+                if (drive.IsReady == true && drive.Name == cdrive)
+                {
+                    freeSpace = Convert.ToInt32(Math.Round(drive.TotalFreeSpace / BytesInMB));
+                }
+            }
+            return freeSpace;
         }
     }
 
@@ -69,4 +90,38 @@ namespace MonitoringLibrary
             return temperature;
         }
     }
+
+    public class RamInfo
+    {
+        const double KbInMB = 1024;
+
+        public static int TotalRamInMB()
+        {
+            var total = 0;
+            ObjectQuery wql = new ObjectQuery("SELECT * FROM Win32_OperatingSystem");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(wql);
+            ManagementObjectCollection results = searcher.Get();
+
+            foreach (var result in results)
+            {
+                total = Convert.ToInt32(Math.Round(Convert.ToDouble(result["TotalVisibleMemorySize"]) / KbInMB));
+            }
+            return total;
+        }
+
+        public static int FreeRamInMB()
+        {
+            var total = 0;
+            ObjectQuery wql = new ObjectQuery("SELECT * FROM Win32_OperatingSystem");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(wql);
+            ManagementObjectCollection results = searcher.Get();
+
+            foreach (var result in results)
+            {
+                total = Convert.ToInt32(Math.Round(Convert.ToDouble(result["FreePhysicalMemory"]) / KbInMB));
+            }
+            return total;
+        }
+    }
+
 }
