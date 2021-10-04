@@ -31,7 +31,6 @@ namespace MonitoringLibrary
             }
         }
 
-        //TODO: пофіксити діск чек по аналогії з оперативкою
         public static int DiskFreeSpace()
         {
             var freeSpace = 0;
@@ -41,7 +40,7 @@ namespace MonitoringLibrary
                 // Skip to next loop cycle when drive is not ready
                 if (drive.IsReady == true && drive.Name == cdrive)
                 {
-                    freeSpace = Convert.ToInt32(Math.Round(drive.TotalFreeSpace / BytesInMB));
+                    freeSpace = Convert.ToInt32(Math.Round(drive.TotalFreeSpace / BytesInGB));
                 }
             }
             return freeSpace;

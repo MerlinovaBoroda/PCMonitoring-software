@@ -6,13 +6,8 @@ namespace PCmonitoring
 {
     public partial class Monitoring : MetroFramework.Forms.MetroForm
     {
-
         const double MbInGB = 1024;
         static string compName = Environment.MachineName;
-
-        //Counter for calculating the free space on disk "C"
-        PerformanceCounter cDiskCounter = new PerformanceCounter("LogicalDisk", "Free Megabytes", "C:", compName);
-
 
         public Monitoring()
         {
@@ -23,9 +18,6 @@ namespace PCmonitoring
         //Form loading Setup
         private void Monitoring_Load(object sender, EventArgs e)
         {
-
-            timer2.Start();
-
             //Setup the RAM info 
             ramProgressBar.Maximum = RamInfo.TotalRamInMB();
             ramAmountLabel.Text = "Amount of RAM = " + Convert.ToString(Math.Round(RamInfo.TotalRamInMB() / MbInGB, 1)) + "GB";
@@ -35,9 +27,10 @@ namespace PCmonitoring
             sysUpTimeCounter.MachineName = compName;
 
             DiskInfo.CheckDiskC();
+
+            //cpuTemperatureTimer.Start();
         }
 
-        //Counter for CPU
         //TODO: Try to change it in normal way
         private void cpucount()
         {
@@ -49,7 +42,7 @@ namespace PCmonitoring
         //Calculating the free RAM
         private void ramcount()
         {
-            ramProgressBar.Text = Convert.ToString(Math.Round(RamInfo.FreeRamInMB() / MbInGB, 1));
+            ramProgressBar.Text = Convert.ToString(Math.Round(RamInfo.FreeRamInMB() / MbInGB, 1)) + " GB";
             ramProgressBar.Value = RamInfo.FreeRamInMB();
         }
 
@@ -67,16 +60,13 @@ namespace PCmonitoring
             diskCLabel2.Text = "Total Disk Space = " + DiskInfo.totalDiskSpaceInGb + " GB";
             diskCLabel3.Text = "Total Free Disk Space = " + DiskInfo.avaliableDiskSpace + " GB";
 
-            DiskInfo.DiskFreeSpace();
-
-            double diskval = Math.Round(cDiskCounter.NextValue() / MbInGB, 2);
             diskProgressBar.Maximum = Convert.ToInt32(DiskInfo.totalDiskSpaceInGb);
-            diskProgressBar.Text = diskval.ToString() + " GB";
-            diskProgressBar.Value = diskProgressBar.Maximum - (int)diskval;
+            diskProgressBar.Text = Convert.ToString(DiskInfo.DiskFreeSpace()) + " GB";
+            diskProgressBar.Value = DiskInfo.DiskFreeSpace();
         }
 
         //timer for all counts
-        private void timer1_Tick(object sender, EventArgs e)
+        private void mainTimer_Tick(object sender, EventArgs e)
         {
             cpucount();
             ramcount();
@@ -84,8 +74,8 @@ namespace PCmonitoring
             diskcount();
         }
 
-        //timer for CPU info
-        private void timer2_Tick(object sender, EventArgs e)
+        //timer for CPU Temperature
+        private void cpuTemperatureTimer_Tick(object sender, EventArgs e)
         {
             cpuTempLabel.Text = SystemInformation.GetSystemInfo().ToString() + " \u00b0C";
             cpuTempBar.Value = Convert.ToInt32(SystemInformation.GetSystemInfo());
